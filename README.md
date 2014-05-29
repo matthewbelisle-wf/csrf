@@ -1,4 +1,4 @@
-CSRF demo for team learning
+CSRF activity for team learning
 
 Setup
 =====
