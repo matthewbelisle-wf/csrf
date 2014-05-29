@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank</title>
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <h1>Super Secure Bank</h1>
+    <form name="send_payment" method="POST" action="/send_payment/">
+      Recpient: <input name="recipient" /><br />
+      Amount: $<input name="amount" /><br />
+      <input name="csrf_token" type="hidden" value="{{ csrf_token }}"/>
+      <input type="submit" value="Send Payment" />
+    </form>
+  </body>
+</html> 

