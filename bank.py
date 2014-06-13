@@ -15,7 +15,8 @@ app.secret_key = 'SECRET_KEY'
 def home():
     if not check_login():
         return flask.render_template('login.html')
-    return flask.render_template('bank.html')
+    # CSRF hint: Something goes here.
+    return flask.render_template('bank.html', csrf_token=None)
 
 @app.route('/login/', methods=['POST'])
 def login():
