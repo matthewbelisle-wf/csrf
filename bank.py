@@ -32,8 +32,8 @@ def send_payment():
         return flask.abort(401, 'You fail - not logged in')
     # CSRF hint: Something goes here.
     response = flask.make_response('${} sent to {}'.format(
-        flask.request.form['amount'],
-        flask.request.form['recipient']
+        flask.request.form.get('amount'),
+        flask.request.form.get('recipient')
     ))
     response.headers['Content-Type'] = 'text/plain'
     return response
