@@ -50,7 +50,7 @@ def set_csrf_token():
     flask.session['csrf_token'] = '{0:x}'.format(random.getrandbits(128))
 
 def get_csrf_token():
-    return flask.session['csrf_token']
+    return flask.session.get('csrf_token')
 
 def check_csrf_token(token):
     return token == get_csrf_token()
